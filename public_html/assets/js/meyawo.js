@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#portfolio",
             start: "top 80%",
-            end: "bottom 40%",
+            end: "bottom 60%",
             toggleActions: "play none none reverse", 
             scrub: true,
         },
