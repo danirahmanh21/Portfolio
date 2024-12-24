@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#home",
             start: "top 100%", 
-            toggleActions: "play none none reverse" 
+            toggleActions: "play none none reverse" ,
         },
     });
 
@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#about",
             start: "top 80%",
+            end: "bottom 20%",
             toggleActions: "play none none reverse", 
+            scrub : true,
         },
     })
     .from("#about .about-img-holder", { x: -200, opacity: 0, duration: 1 })
@@ -88,7 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#portfolio",
             start: "top 80%",
+            end: "bottom 20%",
             toggleActions: "play none none reverse", 
+            scrub: true,
         },
     });
 });
