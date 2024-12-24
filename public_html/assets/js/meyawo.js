@@ -91,18 +91,4 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleActions: "play none none reverse", 
         },
     });
-
-    // Animate Footer Section
-    gsap.from(".footer", {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".footer",
-            start: "top 90%", // Adjust this to ensure it triggers when the footer is visible
-            end: "bottom bottom", // Ensures it completes as the footer scrolls into view
-            toggleActions: "play none none reverse", // Play on scroll down, reverse on scroll up
-        },
-    });
 });
