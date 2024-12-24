@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#about",
             start: "top 80%",
-            end: "bottom 120%",
+            end: "bottom 20%",
             toggleActions: "play none none reverse", 
             scrub : true,
         },
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#portfolio",
             start: "top 80%",
-            end: "bottom 120%",
+            end: "bottom 40%",
             toggleActions: "play none none reverse", 
             scrub: true,
         },
