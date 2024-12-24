@@ -59,17 +59,23 @@ document.addEventListener("DOMContentLoaded", function () {
         y: -50,
         duration: 1,
         ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#home",
+            start: "top 100%", 
+            toggleActions: "play none none reverse" 
+        },
     });
 
-    // Animate About Section using timeline
+    // Animate About Section
     gsap.timeline({
         scrollTrigger: {
             trigger: "#about",
             start: "top 80%",
+            toggleActions: "play none none reverse", 
         },
     })
     .from("#about .about-img-holder", { x: -200, opacity: 0, duration: 1 })
-    .from("#about .about-caption", { x: 200, opacity: 0, duration: 1 }, "<0.5"); // Overlap by 0.5 seconds
+    .from("#about .about-caption", { x: 200, opacity: 0, duration: 1 }, "<0.5");
 
     // Animate Portfolio Section
     gsap.from("#portfolio .portfolio-card", {
@@ -82,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#portfolio",
             start: "top 80%",
+            toggleActions: "play none none reverse", 
         },
     });
 
@@ -94,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: ".footer",
             start: "top 80%",
+            toggleActions: "play none none reverse", 
         },
     });
 });
