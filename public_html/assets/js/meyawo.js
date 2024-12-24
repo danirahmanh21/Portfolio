@@ -49,3 +49,96 @@ function sendToGmail(){
     
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}`);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Animate the header
+    gsap.from("#home .header-content", {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power2.out"
+    });
+
+    // Animate About Section
+    gsap.from("#about .about-img-holder", {
+        x: -200,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%",
+        }
+    });
+
+    gsap.from("#about .about-caption", {
+        x: 200,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 80%",
+        }
+    });
+
+    // Animate Portfolio Section
+    gsap.from("#portfolio .portfolio-card", {
+        scale: 0.8,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#portfolio",
+            start: "top 80%",
+    }
+});
+
+    // Animate Footer Section
+    gsap.from(".footer", {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".footer",
+            start: "top 80%",
+        }
+    });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("#portfolio .portfolio-card", {
+        scale: 0.8,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#portfolio",
+            start: "top 80%", // Adjust this to control when the animation starts
+        }
+});
+
+gsap.from("#portfolio .portfolio-card", {
+    y: 50,
+    opacity: 0,
+    stagger: 0.2, // 0.2-second delay between each animation
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: "#portfolio",
+        start: "top 80%",
+    }
+});
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%",
+    }
+})
+.from("#about .about-img-holder", { x: -200, opacity: 0, duration: 1 })
+.from("#about .about-caption", { x: 200, opacity: 0, duration: 1 }, "<0.5"); // Start slightly overlapping
