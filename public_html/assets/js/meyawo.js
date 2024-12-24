@@ -100,8 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: "power2.out",
         scrollTrigger: {
             trigger: ".footer",
-            start: "top 80%",
-            toggleActions: "play none none reverse", 
+            start: "top 90%", // Adjust this to ensure it triggers when the footer is visible
+            end: "bottom bottom", // Ensures it completes as the footer scrolls into view
+            toggleActions: "play none none reverse", // Play on scroll down, reverse on scroll up
         },
     });
 });
