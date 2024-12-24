@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
             trigger: "#about",
             start: "top 80%",
-            end: "bottom 20%",
+            end: "bottom 30%",
             toggleActions: "play none none reverse", 
             scrub : true,
         },
