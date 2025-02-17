@@ -39,7 +39,7 @@ $('#nav-toggle').click(function(){
 
 //download cv 
 function downloadCV(){
-    window.location.href='assets/docu/CV.pdf';
+    window.location.href='assets/docu/RESUME.pdf';
 }
 
 //send an e-mail
